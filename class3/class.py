@@ -57,3 +57,14 @@ else:
     print("密碼錯誤")
 # if elif else是連續的判斷，只要一個條件成立，後面的判斷就不會執行
 # if一定要有，elif可以有多個但是選用，else只能有一個
+score = float(input("please input your score:"))
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+elif score >= 60:
+    print("D")
+else:
+    print("F")
