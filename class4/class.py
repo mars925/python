@@ -46,3 +46,15 @@ turtle.shape("turtle")  # 設定形狀'arrow'或'turtle'
 
 turtle.stamp()  # 蓋章
 turtle.penup()  # 提筆
+
+import turtle as t
+
+t.shape("circle")
+t.color("red")
+t.speed(0)
+
+for i in range(100):
+    t.stamp()
+    t.penup()
+    t.right(20)
+    t.forward(i * 2)
