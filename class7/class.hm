@@ -1,0 +1,22 @@
+def is_prime(n):
+    """判斷數字 n 是否為質數"""
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+def print_primes_in_range(start, end):
+    """列印 start 到 end 範圍內的所有質數"""
+    for num in range(start, end + 1):
+        if is_prime(num):
+            print(num)
+
+
+# 主程式
+if __name__ == "__main__":
+    start = int(input("請輸入開始整數: "))
+    end = int(input("請輸入結束整數: "))
+    print_primes_in_range(start, end)
