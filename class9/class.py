@@ -53,15 +53,13 @@ print(L[4])  # 取值的方式和字串一樣
 
 L = [1, 2, 3, 4, 5]
 print(L[0:2])  # 取值的方式和字串一樣
-print(L[1:3])  # 取值的方式和字串一樣
+print(L[1:3])  # 取值的方式和字串一樣，取值的方式和字串一樣
 print(L[2:4])  # 取值的方式和字串一樣
 
 print(len(L))  # 取得list的長度，也就是list當中
 
 juices_list = ["蘋果汁", "柳橙汁", "葡萄汁", "系統關閉"]
-juices_list.append("西瓜汁")  # 新增西瓜汁
 print(juices_list)
-["蘋果汁", "柳橙汁", "葡萄汁", "系統關閉", "西瓜汁"]
 while True:
     print("請選擇果汁：")
     for i, juice in enumerate(juices_list, 1):
@@ -74,3 +72,35 @@ while True:
         print(f"您選擇了 {juices_list[int(choice) - 1]}")
     else:
         print("無效的選項，請重新選擇。")
+
+import random
+
+# 隨機生成 1 到 100 之間的整數
+target = random.randint(1, 100)
+
+while True:
+    try:
+        guess = int(input("請猜一個 1 到 100 的數字："))
+        if guess < target:
+            print("再大一點")
+        elif guess > target:
+            print("再小一點")
+        else:
+            print("猜中了！")
+            break
+    except ValueError:
+        print("請輸入數字")
+        continue
+
+
+juice = ["蘋果汁", "柳橙汁", "葡萄汁", "系統關閉"]
+
+while True:
+    for i in range(len(juice)):
+        print(f"{i+1}.{juice[i]}")
+    choice = input("請選擇果汁：")
+    if choice.isdigit() and 1 <= int(choice) <= len(juice):
+        print(f"您選擇了 {juice[int(choice) - 1]}")
+    else:
+        print("無效的選項，請重新選擇。")
+        continue
