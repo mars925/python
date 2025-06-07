@@ -66,3 +66,32 @@ for 跳次 in range(1, 次數 + 1):
         print(f"跳到第 {跳次} 下，休息一下！")
         continue  # 跳過這次跳繩，進入下一次
     print(f"跳繩第 {跳次} 下")
+# 迴圈的 break 可以用來跳出所屬的迴圈，所以判斷break屬於哪個迴圈時，必須要注意縮排
+# 例如:
+
+for i in range(5):
+    for j in range(5):
+        if i == 2 and j == 2:
+            break
+        print(f"i: {i}, j: {j}")
+# 這裡的 break 只會跳出內層的 for 迴圈，外層的 for 迴圈還是會繼續執行
+
+
+# continue
+# 迴圈的 continue 可以用來跳過當前的迴圈，繼續執行下一次的迴圈
+# 例如:
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+# 這裡的 continue 會跳過 i = 2 的那次迴圈，直接執行 i = 3 的那次迴圈
+# 所以輸出的結果是 0, 1, 3, 4
+# continue 也可以用在 while 迴圈中
+# 例如:
+i = 0
+while i < 5:
+    if i == 2:
+        continue
+    print(i)
+    i += 1
+# continue也要判斷所屬的迴圈，所以要注意縮排

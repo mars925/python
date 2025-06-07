@@ -58,3 +58,18 @@ weather[ans - 1] = new_weather
 print("修改後的天氣是”+weather[ans-1])
 print(weather)
 break
+
+# append 在程式執行的過程當中可以將資料加入到列表的最後面
+L = ["Hello", "World"]
+L.append("Python")  # 加入Python
+print(L)  # ['Hello', 'World', 'Python']
+
+# insert 在程式執行的過程當中可以將資料加入到列表的指定位置
+L = ["Hello", "World"]
+L.insert(1, "Python")  # 在索引1的地方加入Python
+print(L)  # ['Hello', 'Python', 'World']
+
+# 修改特定位置的資料
+L = ["Hello", "World"]
+L[1] = "Python"  # 將索引1的資料改成Python
+print(L)  # ['Hello', 'Python']
